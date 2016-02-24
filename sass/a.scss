@@ -1,0 +1,134 @@
+@import "_base.scss";
+
+.main{
+	position:relative;
+}
+.main_list{
+	position: relative;
+	width:100%;
+	height:100%;
+	.channel_name{
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		background:#6AC2EC;
+	}
+	.main_list_view{
+		height: 100%;
+		box-sizing:border-box;
+		padding-bottom:90px;
+		overflow:hidden;
+		.main_list_con{
+			width: 100%;
+			height: 100%;
+			box-sizing:border-box;
+			padding:0 15px;
+			overflow:hidden;
+			overflow-y: scroll;
+			.main_list_tin{
+				position:relative;
+				height: 40px;
+				padding:0 30px 0 5px;
+				line-height: 40px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				border-bottom:1px solid #27AEEF;
+				&::after{
+					content:'';
+					position:absolute;
+					width: 10px;
+					height: 10px;
+					border:2px solid #000;
+					border-left:none;
+					border-bottom:none;
+					top:3px;
+					right: 0;
+					@include transform(rotate(45deg) translatey(100%))
+				}
+			}
+		}
+	}
+	.main_list_nav{
+		position:absolute;
+		height: 40px;
+		padding-top: 5px;
+		width: 100%;
+		line-height: 35px;
+		bottom:0;
+		background:#6AC2EC;
+		.main_list_nav_title{
+			display: inline-block;
+			width: 33.3%;
+			height: 35px;
+			box-sizing:border-box;
+			float: left;
+			text-align:center;
+			border-right:1px solid #27AEEF;
+		}
+	}
+}
+.main_con{
+	position:absolute;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:45px;
+	overflow-x:hidden;
+	background:#B9DFF1;
+	top:0;
+	left:100%;
+	@include transition(left,.5s);
+	&.shw{
+		left: 0;
+	}
+	.main_con_title{
+		position:absolute;
+		top: 0;
+		width: 100%;
+		height: 45px;
+		box-sizing:border-box;
+		padding:0 30px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		line-height: 45px;
+		text-align: center;
+		background:#6AC2EC;
+		font-size: 16px;
+		.goback{
+			position:absolute;
+			top:0;
+			left:0;
+			float: left;
+			width: 10px;
+			height: 10px;
+			border:3px solid #000;
+			border-right:0;
+			border-top:0;
+			@include transform(rotate(45deg) translate(25px,-2px))
+		}
+	}
+	.main_con_article{
+		height: 100%;
+		box-sizing:border-box;
+		padding:0 15px 0 15px;
+		overflow-y: scroll;
+		line-height: 23px;
+		p{
+			padding-top:10px;
+		}
+		img{
+			width: 100%;
+			height: auto;
+			margin-top: 10px
+		}
+		.main_con_gif{
+			text-indent: 0;
+			text-align: center;
+			img{
+				width: 100%;
+			}
+		}
+	}
+}

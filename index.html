@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>模块化编程测试</title>
+	<link rel="stylesheet" type="text/css" href="css/a.css">
+</head>
+<body>
+	<div class="main">
+		<!--列表开始-->
+		<div class="main_list">
+			<header class="channel_name">{{chanelName}}</header>
+			<div class="main_list_view">
+				<ul class="main_list_con">
+					<li class="main_list_tin" v-for="hn in hotNews" v-on:click="requestNewsCon(hn.id)">{{hn.title}}</li>
+				</ul>
+				<ul class="main_list_con">
+					<li class="main_list_tin" v-for="jk in jokes" v-on:click="shwJokeCon(jk)">{{jk}}</li>
+				</ul>
+				<ul class="main_list_con">
+					<li class="main_list_tin" v-for="gif in gifs" v-on:click="shwGifCon(gif.con,gif.picUrl)">{{gif.con}}</li>
+				</ul>
+			</div>
+			<ul class="main_list_nav">
+				<li class="main_list_nav_title" v-for="t in nav" v-on:click="changeChanel($index)">{{t}}</li>
+			</ul>
+		</div>
+		<!--列表结束-->
+		<!--正文开始-->
+		<div class="main_con" v-bind:class="shwCon ? 'shw' : ''">
+			<header class="main_con_name">
+				<h1 class="main_con_title">{{conTitle}}</h1>
+			</header>
+			<div class="main_con_article">{{{articleHtml}}}</div>
+		</div>
+		<!--正文结束-->
+	</div>
+	<script src="js/lib/zepto.js"></script>
+	<script src="js/lib/vue.js"></script>
+	<script src="js/a.js"></script>
+</body>
+</html>

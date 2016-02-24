@@ -1,0 +1,37 @@
+{
+  "name": "jdcsh",
+  "version": "1.1.0",
+  "keywords": [
+    "gulp"
+  ],
+  "description": "simple task",
+  "main": "gulpfile.js",
+  "author": {
+    "name": "dabin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dabin7360/jdcm.git"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "browser-sync": "^2.9.1",
+    "gulp-sass": "^2.0.4",
+    "node-bourbon": "^4.2.3",
+    "gulp-imagemin": "^2.3.0",
+    "imagemin-pngquant": "^4.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "gitHead": "53e23a32eadaa6f3edeaf3dbc78fe64d6cd41519",
+  "bugs": {
+    "url": "https://github.com/dabin7360/jdcm/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/dabin7360/jdcm",
+  "_id": "jdcsh@1.1.0",
+  "scripts": {},
+  "_shasum": "70ca31500262ea9589c35a41e3c46a3b5bfdbe2a",
+  "_from": "jdcsh@*"
+}
