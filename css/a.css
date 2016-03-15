@@ -140,9 +140,11 @@ html, body {
     .main_con .main_con_article p {
       padding-top: 10px; }
     .main_con .main_con_article img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      margin-top: 10px; }
+      margin-top: 10px;
+      display: block;
+      margin: 0 auto; }
     .main_con .main_con_article .main_con_gif {
       text-indent: 0;
       text-align: center; }
