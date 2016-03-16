@@ -23,9 +23,8 @@ var myList = new Vue({
 				case 0:
 					this.requestNews();
 					break;
-				case 1||2:
+				default:
 					this.requestjoke();
-					break;
 			};
 		},
 		//获取热点列表
